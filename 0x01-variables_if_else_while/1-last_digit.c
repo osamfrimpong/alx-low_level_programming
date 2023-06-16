@@ -25,7 +25,7 @@ int main(void)
 	{
 		puts("and is 0");
 	}
-	else if (lastDigit > 0 && lastDigit < 6)
+	else if (lastDigit != 0 && lastDigit < 6)
 	{
 		puts("and is less than 6 and not 0");
 	}
