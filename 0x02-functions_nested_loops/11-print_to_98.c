@@ -1,20 +1,38 @@
 #include "main.h"
+#include <stdio.h>
+
 /**
- *print_to_98 - print numbers to 98
- *@n: character to be verified
- *Return: returns void
-*/
+ * print_to_98 - count the natural numbers from n to 98.
+ * @n: value to count from.
+ *
+ */
 void print_to_98(int n)
 {
-	while (n <= 98)
+	int i;
+
+	if (n == 98)
 	{
-		_putchar('0' + n);
-		if (n < 98)
-		{
-			_putchar(',');
-			_putchar(' ');
-		}
-		n++;
+		printf("98");
 	}
-	_putchar(10);
+	else if (n < 98)
+	{
+		for (i = n ; i <= 98 ; i++)
+		{
+			printf("%d", i);
+			if (i < 98)
+				printf(", ");
+		}
+	}
+	else if (n > 98)
+	{
+		for (i = n ; i >= 98 ; i--)
+		{
+			printf("%d", i);
+			if (i > 98)
+				printf(", ");
+
+		}
+	}
+	printf("\n");
 }
+
