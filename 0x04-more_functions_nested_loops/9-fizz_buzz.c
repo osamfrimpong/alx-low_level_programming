@@ -26,7 +26,7 @@ int main(void)
 		else if (start == 1)
 			printf("%d", start);
 		else
-			printf(" %d", stat);
+			printf(" %d", start);
 		start++;
 	}
 
