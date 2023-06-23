@@ -26,5 +26,4 @@ void more_numbers(void)
 		timesStart++;
 		start = 0;
 	}
-	_putchar(10);
 }
