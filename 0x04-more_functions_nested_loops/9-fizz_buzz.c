@@ -11,7 +11,7 @@
  */
 
 
-int void main(void)
+int main(void)
 {
 	int start = 1;
 
