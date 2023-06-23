@@ -18,13 +18,15 @@ int main(void)
 	while (start <= 100)
 	{
 		if (start % 3 == 0 && start % 5 != 0)
-			printf("Fizz ");
+			printf(" Fizz");
 		else if (start % 5 == 0 && start % 3 != 0)
-			printf("Buzz ");
+			printf(" Buzz");
 		else if (start % 3 == 0 && start % 5 == 0)
-			printf("FizzBuzz ");
+			printf(" FizzBuzz");
+		else if (start == 1)
+			printf("%d", start);
 		else
-			printf("%d ", start);
+			printf(" %d", stat);
 		start++;
 	}
 
