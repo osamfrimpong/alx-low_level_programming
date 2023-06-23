@@ -11,7 +11,7 @@ void more_numbers(void)
 	int start = 0;
 	int timesStart = 1;
 
-	while (timeStart <= 10)
+	while (timesStart <= 10)
 	{
 		while (start <= 14)
 		{
@@ -21,7 +21,7 @@ void more_numbers(void)
 			start++;
 		}
 		_putchar(10);
-		timeStart++;
+		timesStart++;
 		start = 0;
 	}
 	_putchar(10);
