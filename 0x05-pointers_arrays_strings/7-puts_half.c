@@ -10,18 +10,21 @@
 
 void puts_half(char *str)
 {
-	int length = _strlen(str);
+	int index, half;
 
-	int half = length / 2;
+	index = 0;
+	while (str[index] != '\0')
+		index++;
 
-	if (length % 2 != 0)
-		length += 1;
+	half = index / 2;
 
+	if (index % 2 == 1)
+		half++;
 
-	while (half <= length)
+	while (half < index)
 	{
-
-		_putchar(str[(half + 1)]);
+		putchar(str[half]);
 		half++;
 	}
+	putchar('\n');
 }
