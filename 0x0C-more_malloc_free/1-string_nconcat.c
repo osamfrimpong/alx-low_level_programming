@@ -11,17 +11,24 @@
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
+	unsigned int lens1, lens2, start, lenToUse;
+	char *concString;
+
 	if (s2 == NULL)
 		s2 = "";
 
-	unsigned int lens1 = strlen(s1);
-	unsigned int lens2 = strlen(s2);
-	unsigned int lenToUse = n >= lens2 ? lens2 : n;
-	char *concString = malloc(lens1+lenToUse+1);
+	while(s1[lens1] != '\0')
+		lens1++;
+
+	while(s2[lens2] != '\0')
+		lens2++;
+
+	lenToUse = n >= lens2 ? lens2 : n;
+	concString = malloc(lens1+lenToUse+1);
 
 	if (concString == NULL)
 		return (NULL);
-	int start = 0;
+
 
 	while(*s1)
 	{
@@ -38,6 +45,4 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	concString[start + 1] = '\0';
 
 	return (concString);
-
-
 }
