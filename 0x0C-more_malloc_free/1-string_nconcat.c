@@ -17,29 +17,29 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (s2 == NULL)
 		s2 = "";
 
-	while(s1[lens1] != '\0')
+	while (s1[lens1] != '\0')
 		lens1++;
 
-	while(s2[lens2] != '\0')
+	while (s2[lens2] != '\0')
 		lens2++;
 
 	lenToUse = n >= lens2 ? lens2 : n;
-	concString = malloc(lens1+lenToUse+1);
+	concString = malloc(lens1 + lenToUse + 1);
 
 	if (concString == NULL)
 		return (NULL);
 
 
-	while(*s1)
+	while (*s1)
 	{
 		concString[start] = *s1++;
 		start++;
 	}
 
-	while(lenToUse > 0)
+	while (lenToUse > 0)
 	{
 		concString[start] = *s2++;
-		start++,lenToUse--;
+		start++, lenToUse--;
 	}
 
 	concString[start + 1] = '\0';
