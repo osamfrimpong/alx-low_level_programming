@@ -7,17 +7,15 @@
  *
  * Return: pointer to the node to search, or NULL
  */
+
 listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 {
+	unsigned int i;
 
-	unsigned int i = 0;
-	listint_t *temp = head;
-
-	while (temp && i < index)
+	for (i = 0; i < index && head != NULL; i++)
 	{
-		temp = temp->next;
-		i++;
+		head = head->next;
 	}
 
-	return (temp ? temp : NULL);
+	return (head);
 }
