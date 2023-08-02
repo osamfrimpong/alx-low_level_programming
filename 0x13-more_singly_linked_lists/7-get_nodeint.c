@@ -1,7 +1,8 @@
 #include "lists.h"
 
 /**
- * get_nodeint_at_index - returns the node at a certain index in a listint_t list
+ * get_nodeint_at_index - returns the node
+ * at a certain index in a listint_t list
  * @head: first node in the linked list
  * @index: index of the node to return
  *
@@ -17,12 +18,12 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 	{
 		if (counter == index)
 		{
-			return current;
+			return (current);
 		}
 
 		current = current->next;
 		counter++;
 	}
 
-	return NULL;
+	return (NULL);
 }
