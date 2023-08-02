@@ -10,7 +10,7 @@
 int pop_listint(listint_t **head)
 {
 	listint_t *temporal;
-	int data;
+	int number;
 
 	if (!head || !*head)
 		return (0);
