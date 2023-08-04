@@ -17,7 +17,7 @@ unsigned int binary_to_uint(const char *b)
 
 	while (index < strlen(b))
 	{
-		if (b[index] < '0' || b[index] > '1')
+		if (b[index] != '0' || b[index] != '1')
 			return (0);
 		decimal_val = 2 * decimal_val + (b[index] - '0');
 		index++;
